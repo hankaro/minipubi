@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mini Pubi</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b8410a170b.js" crossorigin="anonymous"></script>
+
+        <link rel="icon" type="image/x-icon" href="img/mini-favicon.png">
+
+
+    </head>
+    <body>
+        <h1 class="h1-hidden">Mini Pubi</h1>
+        <section class="hero-image">
+            <div class="nav-container sticky">
+                <div class="nav-logo"><a href="#"><img class="logo" src="img/logo-transparent.svg"/></a></div>
+                <div class="topnav" id="myTopnav">
+                    <a href="#tietoa">Tietoa</a>
+                    <a href="#nayttelyt">Näyttelyt</a>
+                    <a href="#tapahtumat">Tapahtumat</a>
+                    <a href="#yhteys">Yhteystiedot</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                      <i class="fa fa-bars"></i>
+                    </a>
+                  </div>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hero-container">
+                <div class="hero-text">
+                  <div class="hero-logo"><img src="img/logo-on-black.png" /></div>
+                  <div class="hero-address">
+                    <p>K20</p>
+                    <p>Vuorikatu 26, Kuopio</p></div>
+            </div>
+        </section>
+        
+        <section class="about-wrap" id="tietoa">
+            <div class="about">
+                <div class="container">
+                    <div class="tietoa-img-container">
+                        <div class="tietoa-img"></div>
+                    </div>
+                    <div class="tietoa-text">
+                        <h2>Hyvällä tunnelmalla suoraan Kuopion sydämessä!</h2>
+                        <p>Mini Pub on rauhallinen seurustelupubi, jossa sisällä on 35 ja ulkona 15 asiakaspaikkaa. Minissä vallitsee aina hyvä fiilis, oli päivä sitten aurinkoinen tai sateinen. Minissä saat ensiluokkaista asiakaspalvelua, joka ei petä koskaan. Palvelu on maustettu sopivalla määrällä huumoria ja tilannetajua, joten jokainen vieras tuntee olonsa tervetulleeksi. Mini Pub on paikka, josta lähtee aitoja fiiliksiä ja nautinnollisia juomahetkiä. </p>
+                        
+                        <p>Mini on ehdottomasti se paikka, jonne kannattaa tulla!</p>    
+
+                        
+                     </div>
+
+                 </div>
+            </div>
+        </section>
+
+        <section class="nayttelyt" id="nayttelyt">
+            <h2>Näyttelyt</h2>
+
+            <div class="exhibition-container">
+            <div class="art-details exhibition-details">
+                <img class="art-img" src="img/kuiskauksia.png" alt="Art Exhibition">
+            </div>
+
+            <div class="exhibition-details">
+                <span class="n-artist">Jenni Tukiainen o.s. Mönkkönen</span>
+                <span class="n-name">Kuiskauksia</span>
+                <span class="n-days">1.3.- 30.3.</span>
+            </div>
+            </div>
+        </section>
+
+        <section class="tapahtumat" id="tapahtumat">
+            <div class="tapahtumat-container">
+                <h2>Tulevat tapahtumat</h2>
+                <div class="tapahtumat-item">
+                    <div class="tapahtumat-days">
+                        <span class="tapahtumat-date">13</span>
+                        <span class="tapahtumat-month">MAALIS</span>
+                    </div>
+                    <div class="tapahtumat-deets">
+                        <span class="tapahtumat-nimi">Kysynpähän vaan - Tietovisa</span>
+                        <br><span class="tapahtumat-tiedot">Klo 18:00 | Voit visailla yksin tai kaverin kanssa! </span>
+                    </div>
+                </div>
+                <div class="tapahtumat-item">
+                    <div class="tapahtumat-days">
+                        <span class="tapahtumat-date">16</span>
+                        <span class="tapahtumat-month">MAALIS</span>
+                    </div>
+                    <div class="tapahtumat-deets">
+                        <span class="tapahtumat-nimi">Mini Pubin indie-ilta: Hullu Pappila + (Sulut)</span>
+                        <br><span class="tapahtumat-tiedot">Klo 21:00 | Vapaa pääsy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <footer id="yhteys"> 
+            <div>
+              <h2 class="footer__headline">Mini Pubi</h2>
+              <ul class="footer__list">
+                <li>K - 20</li>
+                <li>Avoinna:</li>
+                <li>TI-TO : 16-22(23)</li>
+                <li>PE : 16-02</li>
+                <li>LA : 19-02</li>
+              </ul>
+            </div>
+            <div>
+                <h2 class="footer__headline">Seuraa Miniä!</h2>
+                <ul class="footer__list footer_socials">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+              </div>
+            <div>
+              <h2 class="footer__headline">Yhteystiedot</h2>
+              <ul class="footer__list">
+                <li>Vuorikatu 26, Kuopio, Finland</li>
+                <li>044 2313398</li>
+                <li>minipubi@gmail.com</li>
+              </ul>
+            </div>
+          </footer>
+
+<script id="vertexShader" type="x-shader/x-vertex">
+  attribute vec4 position;
+
+  void main() {
+    gl_Position = vec4( position );
+  }
+</script>
+
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
+            
+    </body>
+</html> 

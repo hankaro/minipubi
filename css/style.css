@@ -1,0 +1,462 @@
+/**
+display: flex aktivoi flexboxin
+flex flow: miten asiat ovat parentin sisällä row rivissä, column vertikaalisesti, wrap laittaa allekain, kun skaalautuu, nowrap ei. Myös reverse, jolloin asiat on päinvastoin
+justify-content: flex-start - vasemmalta oikealle, center, flex-end - oikealta vasemmalle, space around - vähän marginia myös ulkoreunoilla, space between - marginia vain elementtien välissä
+flex-basis: perus koko
+flex-grow: ratio based value.
+flex-shrink: opposite edelliseen
+**/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --background-color: #000;
+    --primary-color: #b11b1b;
+    --nav-text: #fff;
+    --secondary-color: rgb(37, 199, 145);
+    --light-on-dark: #fff;
+    font-size: 16px;
+  }
+
+body{
+    background-color: var(--background-color);
+    font-size: 1rem;
+    height: auto;
+    margin: 0;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    color: var(--light-on-dark)
+
+}
+
+.h1-hidden{
+    display: none;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+/* Navi*/
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+.hero-image {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/mini-hero.png");
+    min-height: 15em;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 80px 40px 40px 0 ;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+    width: 100%;
+    padding: 16px;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+}
+
+.logo {
+    height: 50px; /* Adjust the height as needed */
+}
+
+.topnav {
+    overflow: hidden;
+    padding-right: 24px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+  .topnav a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  
+  .topnav a.active {
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  .topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav a.active {
+        background-color: black;
+        color: white;
+      }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+@media all and (max-width: 600px) {
+
+    .hero-image {
+        height: 100%
+    }
+    
+    .nav-container{
+        flex-direction: column;
+        background-color: #000;
+        align-items: normal;
+    }
+
+    .nav-logo {
+        display:none;
+        height: 60px;
+        padding: 0 32px;
+        margin: 0;
+    }
+
+    .hero-container {
+        margin: 64px 0 0 0;
+        background-color: #000;
+        padding: 40px;
+        align-self: center;
+        width: 100px;
+    }
+  }
+
+/* Hero */
+
+
+.hero-container {
+    margin: 64px 0 0 0;
+    background-color: #000;
+    padding: 40px;
+    align-self: center;
+}
+
+.hero-logo{
+    max-width: 200px;
+}
+
+.hero-logo img {
+    width: 100%;
+}
+
+.hero-address {
+    margin: 16px 0 0 0;
+    border-top: 1px solid #929292;
+}
+
+      
+.hero-text {
+    text-align: center;
+    color: white;
+}
+
+.hero-header{
+    align-self: center;
+    font-size:50px;
+}
+
+/* About */
+
+.about-wrap {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../img/tausta.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about {
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 50px 20px;
+    flex-wrap: wrap; 
+}
+
+.about h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.tietoa-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url("../img/mini1.jpg");
+    background-size: cover;
+    margin: auto; 
+}
+
+.tietoa-text {
+    flex: 1;
+    margin: 0 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .tietoa-img {
+        margin: auto;
+    }
+
+    .tietoa-text {
+        margin: 0; 
+    }
+}
+
+
+
+/* Näyttelyt */
+
+.nayttelyt {
+    position: relative;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 10px;
+    max-height: 900px;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/mini2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+  .nayttelyt h2 {
+    margin-bottom: 20px;
+  }
+
+  .exhibition-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #000;
+    max-width: 800px;
+    padding:40px;
+  }
+
+  .art-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .exhibition-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keskitä sisältö vaakasuunnassa */
+    justify-content: center; /* Keskitä sisältö pystysunnassa */
+    flex: 0 1 45%;
+    margin: 10px;
+}
+
+  .n-artist,
+.n-name,
+.n-days {
+    align-items: center; /* Keskitä teksti vaakasuunnassa */
+    justify-content: center; /* Keskitä teksti pystysunnassa */
+}
+
+  .n-artist{
+    display: flex;
+    font-size: 1.5rem;
+  }
+
+  .n-name{
+    display: flex;
+    font-size: 3rem;
+  }
+
+  .n-days{
+    display: flex;
+    font-size: 2rem;
+  }
+
+/* Tapahtumat */
+
+.tapahtumat {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)), url("../img/tausta.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 40px;
+    border-bottom: 1px solid gray;
+
+}
+
+.tapahtumat-container {
+    height: 100%;
+    padding: 40px;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    width:640px;
+
+}
+
+.tapahtumat-item {
+    display: flex; 
+    flex-direction: row; 
+    height: 100%;
+    background-color: #000;
+    padding: 0 12px 8px;
+    border: 1px solid gray;
+    border-radius: 12px;
+    color: white;
+    margin: 0 0 12px 0;
+    justify-content: left;
+    flex-basis:640;
+}
+
+
+.tapahtumat-days {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    flex-wrap: wrap;
+    width: 80px; 
+    margin-right: 16px;
+    flex-grow:1;
+}
+
+.tapahtumat-date{
+    display: flex;
+    font-size: 2.5rem;
+    font-weight: 800;
+
+}
+
+.tapahtumat-weekday{
+    display: flex;
+    font-size: 0.8rem;
+
+}
+
+.tapahtumat-deets {
+    display: flex;
+    flex-grow:3;
+    margin-top:16px;
+    width:100%;
+    flex-direction: column;
+    text-align: left;
+}
+
+.tapahtumat-nimi{
+    font-size: 1.5rem;
+}
+
+.tapahtumat-tiedot {
+        text-align: left;
+        font-size: 1rem;
+}
+
+
+
+/* Rest of your HTML and CSS */
+
+
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: #ffffff;
+    white-space: normal;
+    margin:40px;
+}
+
+footer  a {
+    color: #8a8a8a;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer__headline {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .footer__list {
+    list-style: none;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer_socials{
+    display: flex;
+  }
+
+  .footer__list i {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-right: 16px;
+  }
